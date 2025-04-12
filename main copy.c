@@ -1,22 +1,5 @@
 //******************************************************************************
-//  MSP430F5529 SSD1306 OLED Display
-//
-//  Description: This demo connects two MSP430's via the I2C bus. The master
-//  transmits to the slave. This is the MASTER CODE. It cntinuously
-//  transmits an array of data and demonstrates how to implement an I2C
-//  master transmitter sending multiple bytes using the USCI_B0 TX interrupt.
-//  ACLK = n/a, MCLK = SMCLK = BRCLK = default DCO = ~1.045MHz
-//
-//
-//                                /|\  /|\
-//                MSP430F5529     10k  10k      SSD1306 OLED
-//                   master        |    |         Display
-//             -----------------   |    |   -----------------
-//           -|XIN  P4.1/UCB0SDA|<-|----+->|SDA              |-
-//            |                 |  |       |                 |
-//           -|XOUT             |  |       |                 |-
-//            |     P4.2/UCB0SCL|<-+------>|SCL              |
-//            |                 |          |                 |
+// shows keypad input on the SSD1306 OLED Display
 //
 //******************************************************************************
 
@@ -25,10 +8,6 @@
 #include "i2c.h"
 #include "clock.h"
 
-extern unsigned char *PTxData;                  // Pointer to TX data, defined in i2c.h
-extern unsigned char TXByteCtr;                 // number of bytes to transmit, defined in i2c.h
-
-#define MAX_COUNT 4294967295UL
 
 void setupGPIO();
 unsigned char readBCDInput();
