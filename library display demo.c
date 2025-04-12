@@ -1,5 +1,6 @@
 //******************************************************************************
-//  MSP430F5529 SSD1306 OLED Display
+//  Code is from: MSP430F5529 SSD1306 OLED Display Library 
+//  https://samueldperry.com/2019/05/24/ssd1306-oled-display-library-for-msp430g2-ti-lauchpad/
 //
 //  Description: This demo connects two MSP430's via the I2C bus. The master
 //  transmits to the slave. This is the MASTER CODE. It cntinuously
